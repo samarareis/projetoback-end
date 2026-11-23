@@ -1,12 +1,17 @@
+
 {
   "name": "projeto-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "API Backend Digital College",
+  "main": "src/server.js",
   "scripts": {
     "test": "jest --runInBand",
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "db:migrate": "sequelize-cli db:migrate",
+    "db:migrate:test": "sequelize-cli db:migrate --env test",
+    "db:migrate:undo:test": "sequelize-cli db:migrate:undo --env test",
+    "db:migrate:status": "sequelize-cli db:migrate:status"
   },
   "keywords": [],
   "author": "",
